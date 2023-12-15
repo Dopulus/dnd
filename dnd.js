@@ -89,41 +89,43 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 
-document.addEventListener('DOMContentLoaded', function() { //non fa
+document.addEventListener('DOMContentLoaded', function() {
     document.getElementById('razza').addEventListener('change', function() {
         var razza = this.value;
-        var corpo = document.body;
-
-        switch(razza) {
-            case 'umano':
-                corpo.style.boxShadow = '10px 10px 5px black';
-                break;
-            case 'elfo':
-                corpo.style.boxShadow = '10px 10px 5px green';
-                break;
-            case 'nano':
-                corpo.style.boxShadow = '10px 10px 5px blue';
-                break;
-            case 'mezzelfo':
-                corpo.style.boxShadow = '10px 10px 5px brown';
-                break;
-            case 'mezzorco':
-                corpo.style.boxShadow = '10px 10px 5px gray';
-                break;
-            case 'gnomo':
-                corpo.style.boxShadow = '10px 10px 5px white';
-                break;
-            case 'halfling':
-                corpo.style.boxShadow = '10px 10px 5px purple';
-                break;
-            case 'dragonide':
-                corpo.style.boxShadow = '10px 10px 5px yellow';
-                break;
-            case 'tiefling':
-                corpo.style.boxShadow = '10px 10px 5px pink';
-                break;
-            default:
-                corpo.style.boxShadow = '10px 10px 5px red';
+        var corpo = document.getElementsByClassName('corpo');
+        for (let i = 0; i < corpo.length; i++) {
+            let singoloCorpo = corpo[i];
+            switch (razza) {
+                case 'umano':
+                    singoloCorpo.style.boxShadow = '0px 0px 30px black';
+                    break;
+                case 'elfo':
+                    singoloCorpo.style.boxShadow = '0px 0px 30px green';
+                    break;
+                case 'nano':
+                    singoloCorpo.style.boxShadow = '0px 0px 30px blue';
+                    break;
+                case 'mezzelfo':
+                    singoloCorpo.style.boxShadow = '0px 0px 30px brown';
+                    break;
+                case 'mezzorco':
+                    singoloCorpo.style.boxShadow = '0px 0px 30px gray';
+                    break;
+                case 'gnomo':
+                    singoloCorpo.style.boxShadow = '0px 0px 30px white';
+                    break;
+                case 'halfling':
+                    singoloCorpo.style.boxShadow = '0px 0px 30px purple';
+                    break;
+                case 'dragonide':
+                    singoloCorpo.style.boxShadow = '0px 0px 30px yellow';
+                    break;
+                case 'tiefling':
+                    singoloCorpo.style.boxShadow = '0px 0px 30px pink';
+                    break;
+                default:
+                    singoloCorpo.style.boxShadow = '0px 0px 30px red';
+            }
         }
     });
 });
