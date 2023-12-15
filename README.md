@@ -12,10 +12,10 @@ Il progetto è suddiviso in tre parti principali:
 
 Il codice HTML costituisce la struttura di base del sito web.
 
-#### 2. CSS 
+### 2. CSS 
 
 Il codice CSS serve alla personallizzazione della pagina.
 
-##### 3. JS 
+### 3. JS 
 
 il codice JS in questa pagina viene utilizzato per il funzionamento delle meccaniche per la creazione del personaggio
