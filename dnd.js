@@ -89,41 +89,73 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 
-document.addEventListener('DOMContentLoaded', function() { //non fa
+document.addEventListener('DOMContentLoaded', function() {
     document.getElementById('razza').addEventListener('change', function() {
         var razza = this.value;
-        var corpo = document.body;
+        var corpo = document.getElementsByClassName('corpo');
+        for (let i = 0; i < corpo.length; i++) {
+            let singoloCorpo = corpo[i];
+            switch (razza) {
+                case 'umano':
+                    singoloCorpo.style.boxShadow = '0px 0px 30px black';
+                    break;
+                case 'elfo':
+                    singoloCorpo.style.boxShadow = '0px 0px 30px green';
+                    break;
+                case 'nano':
+                    singoloCorpo.style.boxShadow = '0px 0px 30px blue';
+                    break;
+                case 'mezzelfo':
+                    singoloCorpo.style.boxShadow = '0px 0px 30px brown';
+                    break;
+                case 'mezzorco':
+                    singoloCorpo.style.boxShadow = '0px 0px 30px gray';
+                    break;
+                case 'gnomo':
+                    singoloCorpo.style.boxShadow = '0px 0px 30px white';
+                    break;
+                case 'halfling':
+                    singoloCorpo.style.boxShadow = '0px 0px 30px purple';
+                    break;
+                case 'dragonide':
+                    singoloCorpo.style.boxShadow = '0px 0px 30px yellow';
+                    break;
+                case 'tiefling':
+                    singoloCorpo.style.boxShadow = '0px 0px 30px pink';
+                    break;
+                default:
+                    singoloCorpo.style.boxShadow = '0px 0px 30px red';
+            }
+        }
+    });
+});
 
-        switch(razza) {
-            case 'umano':
-                corpo.style.boxShadow = '10px 10px 5px black';
-                break;
-            case 'elfo':
-                corpo.style.boxShadow = '10px 10px 5px green';
-                break;
-            case 'nano':
-                corpo.style.boxShadow = '10px 10px 5px blue';
-                break;
-            case 'mezzelfo':
-                corpo.style.boxShadow = '10px 10px 5px brown';
-                break;
-            case 'mezzorco':
-                corpo.style.boxShadow = '10px 10px 5px gray';
-                break;
-            case 'gnomo':
-                corpo.style.boxShadow = '10px 10px 5px white';
-                break;
-            case 'halfling':
-                corpo.style.boxShadow = '10px 10px 5px purple';
-                break;
-            case 'dragonide':
-                corpo.style.boxShadow = '10px 10px 5px yellow';
-                break;
-            case 'tiefling':
-                corpo.style.boxShadow = '10px 10px 5px pink';
-                break;
-            default:
-                corpo.style.boxShadow = '10px 10px 5px red';
+document.addEventListener('DOMContentLoaded', function () {
+    const form = document.getElementById('myForm');
+    const corpoDivs = document.querySelectorAll('.corpo');
+
+    form.addEventListener('submit', function (event) {
+        event.preventDefault();
+
+        // Verifica se tutti i campi del form sono stati compilati
+        const allFieldsFilled = Array.from(form.elements).every(function (element) {
+            return element.type !== 'submit' && element.value.trim() !== '';
+        });
+
+        if (allFieldsFilled) {
+            // Nascondi tutti i div con la classe "corpo"
+            corpoDivs.forEach(function (corpoDiv) {
+                corpoDiv.style.display = 'none';
+            });
+
+            // Mostra i div con la classe "corpo" uno alla volta
+            corpoDivs.forEach(function (corpoDiv, index) {
+                setTimeout(function () {
+                    corpoDiv.style.display = 'block';
+                }, index * 1000); // Ritardo di 1 secondo (puoi regolare questo valore)
+            });
+        } else {
+            alert('Compila tutti i campi del form prima di procedere.');
         }
     });
 });
