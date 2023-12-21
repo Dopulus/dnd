@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 
-<html>
+<html lang="it">
     <head>
         <meta charset="UTF-8">
         <title>Creazione Personaggio D&D</title>
@@ -8,146 +8,155 @@
         <script src="dnd.js"></script>
     </head>
     <body>
-        <header>
+        <div class="corpo">
             <img src="DnD-Symbol.png" alt="Dungeons & Dragons" id="logo">
             <h1>Creazione personaggio D&D</h1>
-        </header>
-
-        <!--si potrebbe mettere la guida su come si fa un personaggio-->
-
-        <div class="corpo">
-            <p>
-                <label for="nome">Nome:</label>
-                <input type="text" id="nome" name="nome" required>
-
-                <label for="eta">Età:</label>
-                <input type="number" id="eta" name="eta" min="1" max="1000" required>
-
-                <label for="altezza">Altezza:</label>
-                <input type="number" id="altezza" name="altezza" min="1" max="300" required>
-
-                <label for="peso">Peso:</label>
-                <input type="number" id="peso" name="peso" min="1" max="300" required>
-
-                <label for="genere">Genere:</label>
-                <select id="genere" name="genere">
-                    <option value="------">------</option>
-                    <option value="maschio">Maschio</option>
-                    <option value="femmina">Femmina</option>
-                    <option value="altro">Altro</option>
-                </select>
-            </p>
-        </div>
-
-        <div class="corpo">
-            <!--per questa parte implementare che la scelta delle cose in classe, razza, alinneamento, background impostano le cose nella pagina prova creata nel js-->
-            <p>
-                <label for="classe">Classe:</label>
-                <select id="classe" name="classe">
-                    <option value="------">------</option>
-                    <option value="barbaro">Barbaro</option>
-                    <option value="bardo">Bardo</option>
-                    <option value="chierico">Chierico</option>
-                    <option value="druido">Druido</option>
-                    <option value="guerriero">Guerriero</option>
-                    <option value="ladro">Ladro</option>
-                    <option value="mago">Mago</option>
-                    <option value="monaco">Monaco</option>
-                    <option value="paladino">Paladino</option>
-                    <option value="ranger">Ranger</option>
-                    <option value="stregone">Stregone</option>
-                    <option value="warlock">Warlock</option>
-                </select>
-
-                <label for="razza">Razza:</label>
-                <select id="razza" name="razza">
-                    <option value="------">------</option>
-                    <otion value="dregonide">Dregonide</option>
-                    <option value="elfo">Elfo</option>
-                    <option value="halfling">Halfling</option>
-                    <option value="nano">Nano</option>
-                    <option value="umano">Umano</option>
-                    <option value="mezzelfo">Mezzelfo</option>
-                    <option value="mezzorco">Mezzorco</option>
-                    <option value="gnomo">Gnomo</option>
-                </select>
-
-                <label for="allineamento">Allineamento:</label>
-                <select id="allineamento" name="allineamento">
-                    <option value="------">------</option>
-                    <option value="legale buono">Legale Buono</option>
-                    <option value="neutrale buono">Neutrale Buono</option>
-                    <option value="caotico buono">Caotico Buono</option>
-                    <option value="legale neutrale">Legale Neutrale</option>
-                    <option value="neutrale">Neutrale</option>
-                    <option value="caotico neutrale">Caotico Neutrale</option>
-                    <option value="legale malvagio">Legale Malvagio</option>
-                    <option value="neutrale malvagio">Neutrale Malvagio</option>
-                    <option value="caotico malvagio">Caotico Malvagio</option>
-                </select>
-
-                <label for="background">Background:</label>
-                <select id="background" name="background">
-                    <option value="------">------</option>
-                    <option value="acolito">Acolito</option>
-                    <option value="artigiano">Artigiano della Gilda</option>
-                    <option value="ciarlatano">Ciarlatano</option>
-                    <option value="criminale">Criminale</option>
-                    <option value="eremita">Eremita</option>
-                    <option value="EroePopolere">Eroe del Popolo</option>
-                    <option value="nobile">Nobile</option>
-                    <option value="forestiero">Forestiero</option>
-                    <option value="intrattenitore">Intrattenitore</option>
-                    <option value="marinaio">Marinaio</option>
-                    <option value="monello">Monello</option>
-                    <option value="sapiente">Sapiente</option>
-                    <option value="soldato">Soldato</option>
-                </select>
-            </p>
-            
-
         </div>
 
         <div class="corpo">
             <p>
-                <!--mettere la velocità predefinita di ogni razza-->
-                <label for="velocita">Velocità:</label>
-                <input type="number" id="velocita" name="velocita" min="1" max="100" required >m
-            </p>
-
-            <p>
-                <!--mettere la classe armatura predefinita del personaggio cioè 10 + modificatore di destrezza-->
-                <label for="ca">Classe Armatura:</label>
-                <input type="number" id="ca" name="ca" min="1" max="100" required>
-            </p>
-
-            <p>
-                <!--mettere l'iniziativa predefinita cioè destrezza-->
-                <label for="iniziativa">Iniziativa:</label>
-                <input type="number" id="iniziativa" name="iniziativa" min="1" max="100" value="destrezza-mod" required>
-            </p>
-
-            <p>
-                <!--mettere i dadi vita che appare mettendo il dado della classe per livello tipo barbaro ha un 1d12 al livello 1 o 3d12 al livello 3-->
-                <label for="dadiVita">Dadi Vita:</label>
-                <input type="number" id="dadiVita" name="dadiVita" min="1" max="100" required>
-            </p>
-
-            <p>
-                <!--mettere il bonus competenza predefinito cioè 2 ma che ogni qualche livello aumenta-->
-                <label for="bonusCompetenza">bonus competenza:</label>
-                <input type="number" id="bonusCompetenza" name="bonusCompetenza" min="1" max="100" required>  
-            </p>
-
-            <p>
-                <!--mettere i punti vita iniziali predefiniti cioè il massimo del dado vita al primo livello + costituzione e poi per ogni livello prendere la metà del dado per eccesso+ costituzione-->
-                <label for="puntiVita">Punti Vita iniziali:</label>
-                <input type="number" id="puntiVita" name="puntiVita" min="1" max="100" required>
+                Qui a fianco c'è una guida che ti può servire ad aiutarti alla creazione del personaggio.
+                <a href="guida.html">Guida</a>
             </p>
         </div>
 
         <div class="corpo">
-            <form action="dnd.php" method="post">
+            <form id="flex">
+                <p>
+                    <label for="nome">Nome:</label>
+                    <input type="text" id="nome" name="nome" required>
+
+                    <label for="eta">Età:</label>
+                    <input type="number" id="eta" name="eta" min="1" max="1000" required>
+
+                    <label for="altezza">Altezza:</label>
+                    <input type="number" id="altezza" name="altezza" min="1" max="300" required>
+
+                    <label for="peso">Peso:</label>
+                    <input type="number" id="peso" name="peso" min="1" max="300" required>
+
+                    <label for="genere">Genere:</label>
+                    <select id="genere" name="genere">
+                        <option value="------">------</option>
+                        <option value="maschio">Maschio</option>
+                        <option value="femmina">Femmina</option>
+                        <option value="altro">Altro</option>
+                    </select>
+                </p>
+            </form>
+        </div>
+
+        <div class="corpo">
+            <!--per questa parte implementare che la scelta delle cose in classe, razza, allineamento, background impostano le cose nella pagina prova creata nel js-->
+            <form id="flex">
+                <p>
+                    <label for="classe">Classe:</label>
+                    <select id="classe" name="classe">
+                        <option value="------">------</option>
+                        <option value="barbaro">Barbaro</option>
+                        <option value="bardo">Bardo</option>
+                        <option value="chierico">Chierico</option>
+                        <option value="druido">Druido</option>
+                        <option value="guerriero">Guerriero</option>
+                        <option value="ladro">Ladro</option>
+                        <option value="mago">Mago</option>
+                        <option value="monaco">Monaco</option>
+                        <option value="paladino">Paladino</option>
+                        <option value="ranger">Ranger</option>
+                        <option value="stregone">Stregone</option>
+                        <option value="warlock">Warlock</option>
+                    </select>
+
+                    <label for="razza">Razza:</label>
+                    <select id="razza" name="razza">
+                        <option value="------">------</option>
+                        <otion value="dregonide">Dregonide</option>
+                        <option value="elfo">Elfo</option>
+                        <option value="halfling">Halfling</option>
+                        <option value="nano">Nano</option>
+                        <option value="umano">Umano</option>
+                        <option value="mezzelfo">Mezzelfo</option>
+                        <option value="mezzorco">Mezzorco</option>
+                        <option value="gnomo">Gnomo</option>
+                    </select>
+
+                    <label for="allineamento">Allineamento:</label>
+                    <select id="allineamento" name="allineamento">
+                        <option value="------">------</option>
+                        <option value="legale buono">Legale Buono</option>
+                        <option value="neutrale buono">Neutrale Buono</option>
+                        <option value="caotico buono">Caotico Buono</option>
+                        <option value="legale neutrale">Legale Neutrale</option>
+                        <option value="neutrale">Neutrale</option>
+                        <option value="caotico neutrale">Caotico Neutrale</option>
+                        <option value="legale malvagio">Legale Malvagio</option>
+                        <option value="neutrale malvagio">Neutrale Malvagio</option>
+                        <option value="caotico malvagio">Caotico Malvagio</option>
+                    </select>
+
+                    <label for="background">Background:</label>
+                    <select id="background" name="background">
+                        <option value="------">------</option>
+                        <option value="acolito">Acolito</option>
+                        <option value="artigiano">Artigiano della Gilda</option>
+                        <option value="ciarlatano">Ciarlatano</option>
+                        <option value="criminale">Criminale</option>
+                        <option value="eremita">Eremita</option>
+                        <option value="EroePopolere">Eroe del Popolo</option>
+                        <option value="nobile">Nobile</option>
+                        <option value="forestiero">Forestiero</option>
+                        <option value="intrattenitore">Intrattenitore</option>
+                        <option value="marinaio">Marinaio</option>
+                        <option value="monello">Monello</option>
+                        <option value="sapiente">Sapiente</option>
+                        <option value="soldato">Soldato</option>
+                    </select>
+                </p>
+            </form>
+        </div>
+
+        <div class="corpo">
+            <form id="flex">
+                <p>
+                    <!--mettere la velocità predefinita di ogni razza-->
+                    <label for="velocita">Velocità:</label>
+                    <input type="number" id="velocita" name="velocita" min="1" max="100" required >m
+                </p>
+
+                <p>
+                    <!--mettere la classe armatura predefinita del personaggio cioè 10 + modificatore di destrezza-->
+                    <label for="ca">Classe Armatura:</label>
+                    <input type="number" id="ca" name="ca" min="1" max="100" required>
+                </p>
+
+                <p>
+                    <!--mettere l'iniziativa predefinita cioè destrezza-->
+                    <label for="iniziativa">Iniziativa:</label>
+                    <input type="number" id="iniziativa" name="iniziativa" min="1" max="100" value="destrezza-mod" required>
+                </p>
+
+                <p>
+                    <!--mettere i dadi vita che appare mettendo il dado della classe per livello tipo barbaro ha un 1d12 al livello 1 o 3d12 al livello 3-->
+                    <label for="dadiVita">Dadi Vita:</label>
+                    <input type="number" id="dadiVita" name="dadiVita" min="1" max="100" required>
+                </p>
+
+                <p>
+                    <!--mettere il bonus competenza predefinito cioè 2 ma che ogni qualche livello aumenta-->
+                    <label for="bonusCompetenza">Bonus competenza:</label>
+                    <input type="number" id="bonusCompetenza" name="bonusCompetenza" min="1" max="100" required>  
+                </p>
+
+                <p>
+                    <!--mettere i punti vita iniziali predefiniti cioè il massimo del dado vita al primo livello + costituzione e poi per ogni livello prendere la metà del dado per eccesso+ costituzione-->
+                    <label for="puntiVita">Punti Vita iniziali:</label>
+                    <input type="number" id="puntiVita" name="puntiVita" min="1" max="100" required>
+                </p>
+            </form>
+        </div>
+
+        <div class="corpo">
+            <form id="prova">
                 <p>Statistiche:</p>
                 <p>
                     <label for="forza">Forza</label>
@@ -185,7 +194,7 @@
             </form>
         </div>
 
-        <div class="contorno">
+        <div class="corpo">
             <div id="colonna">  
                 <form>        
                     <p>
@@ -241,9 +250,11 @@
                     <input type="checkbox" name="sottocomune" value="sottocomune">Sottocomune<br>
                 </p>  
                 
+                <br>
+                
                 <p>
                     <label for="equipaggiamento">Equipaggiamento:</label><br>
-                    <!--Qua ci va qualcosa che quando scegli la classe e il back ground appare equipaggiamento-->
+                    <!--Qua ci va qualcosa che quando scegli la classe e il background appare equipaggiamento-->
                 </p>
             </form>
         </div>
