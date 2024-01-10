@@ -59,3 +59,24 @@ p {
 footer {
     text-align: center;
 }
+
+td {
+    font-size: 20px;
+    text-align: center;
+    padding: 10px;
+    border: 1px solid white;
+}
+
+table{
+    border: 1px solid white;
+    border-collapse: collapse;
+}
+
+tr{
+    border: 1px solid white;
+}
+
+th{
+    border: 1px solid white;
+    padding: 10px;
+}
