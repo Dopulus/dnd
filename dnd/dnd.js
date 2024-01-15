@@ -97,7 +97,7 @@ document.addEventListener('DOMContentLoaded', function() {
             let singoloCorpo = corpo[i];
             switch (razza) {
                 case 'umano':
-                    singoloCorpo.style.boxShadow = '0px 0px 30px black';
+                    singoloCorpo.style.boxShadow = '0px 0px 30px yellow';
                     break;
                 case 'elfo':
                     singoloCorpo.style.boxShadow = '0px 0px 30px green';
@@ -159,3 +159,6 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     });
 });
+
+// jQuery
+
