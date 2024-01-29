@@ -137,22 +137,19 @@ document.addEventListener('DOMContentLoaded', function () {
     form.addEventListener('submit', function (event) {
         event.preventDefault();
 
-        // Verifica se tutti i campi del form sono stati compilati
         const allFieldsFilled = Array.from(form.elements).every(function (element) {
             return element.type !== 'submit' && element.value.trim() !== '';
         });
 
         if (allFieldsFilled) {
-            // Nascondi tutti i div con la classe "corpo"
             corpoDivs.forEach(function (corpoDiv) {
                 corpoDiv.style.display = 'none';
             });
 
-            // Mostra i div con la classe "corpo" uno alla volta
             corpoDivs.forEach(function (corpoDiv, index) {
                 setTimeout(function () {
                     corpoDiv.style.display = 'block';
-                }, index * 1000); // Ritardo di 1 secondo (puoi regolare questo valore)
+                }, index * 1000);
             });
         } else {
             alert('Compila tutti i campi del form prima di procedere.');
