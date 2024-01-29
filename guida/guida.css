@@ -5,11 +5,11 @@ body {
 }
 
 header {
-    background-color: rgb(26, 85, 26);
+    background-color: black;
     padding: 20px;
     border-radius: 10px;
     margin-bottom: 20px;
-    font-size: 45px;
+    font-size: 30px;
     box-shadow: 0px 0px 50px rgb(88, 224, 88);
 }
 
@@ -21,7 +21,7 @@ h1 {
 }
 
 main {
-    background-color: rgb(26, 85, 26);
+    background-color: black;
     padding: 20px;
     border-radius: 10px;
     margin-bottom: 20px;
@@ -58,4 +58,27 @@ p {
 
 footer {
     text-align: center;
+}
+
+td {
+    font-size: 20px;
+    text-align: center;
+    padding: 10px;
+    border: 1px solid white;
+}
+
+table{
+    border: 1px solid white;
+    border-collapse: collapse;
+    height: 100%;
+    width: 100%; 
+}
+
+tr{
+    border: 1px solid white;
+}
+
+th{
+    border: 1px solid white;
+    padding: 10px;
 }
