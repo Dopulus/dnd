@@ -156,15 +156,15 @@ label {
     text-align: center;
 }
 
-input[type="submit"], input[type="reset"] {
+input[type="submit"], input[type="reset"] { /*da finire*/
     margin: 0px;
     padding: 0px;
-    border: none; /* rimuove il bordo */
-    color: white; /* colore del testo */
-    text-align: center; /* allinea il testo al centro */
-    text-decoration: none; /* rimuove la sottolineatura */
+    border: none;
+    color: white; 
+    text-align: center;
+    text-decoration: none;
     display: inline-block;
     font-size: 16px;
-    transition-duration: 0.4s; /* durata dell'effetto di transizione */
-    cursor: pointer; /* cambia il cursore in un puntatore quando si passa sopra */
+    transition-duration: 0.4s;
+    cursor: pointer;
 }
