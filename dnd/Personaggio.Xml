@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Personaggio>
+    <Nome>Nome</Nome>
+    <Razza>Razza</Razza>
+    <Classe>Classe</Classe>
+    <Allineamento>Allineamento</Allineamento>
+    <Background>Background</Background>
+    <Esperienza>Esperienza</Esperienza>
+    <Iniziativa>Iniziativa</Iniziativa>
+</Personaggio>
