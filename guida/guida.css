@@ -82,3 +82,7 @@ th{
     border: 1px solid white;
     padding: 10px;
 }
+
+strong{
+    color: rgb(116, 255, 116);
+}
