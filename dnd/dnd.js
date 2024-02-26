@@ -37,10 +37,6 @@ window.onload = function() {
     document.getElementById('rollButton').addEventListener('click', rollStats);
 }  
 
-
-
-// prove di come fare funzionare la scelta della classe bisogna sistemare!!!
-
 document.addEventListener('DOMContentLoaded', function() {
     document.getElementById('classe').addEventListener('change', function() {
         var classe = this.value;
@@ -156,6 +152,3 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     });
 });
-
-// jQuery
-

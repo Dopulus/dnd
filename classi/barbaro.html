@@ -5,13 +5,15 @@
         <meta charset="UTF-8">
         <title>Guida alla creazione di un personaggio di D&D</title>
         <link rel="stylesheet" href="../guida/guida.css">
+        <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
     </head>
     <body>
         <header>
             <h1>Barbaro</h1>   
         </header>
 
-        <main>
+        <main class="container">
             <p>
                 Il Barbaro è un maestro della battaglia che scatena la sua ira per ottenere potere sovrumano in combattimento. Animato da una forza primordiale, il Barbaro può resistere ai danni, infliggere colpi devastanti e diventare una forza incontrastata sul campo di battaglia.
             </p>
@@ -23,7 +25,7 @@
             </p>
         </main>
 
-        <main>
+        <main class="container">
             <h1>Punti Ferita</h1>
             <p>
                 <strong>Dado Vita:</strong> 1d12 per livello da barbaro<br>
@@ -32,7 +34,7 @@
             </p>
         </main>
 
-        <main>
+        <main class="container">
             <h1>Competenze</h1>
             <p>
                 <strong>Armature:</strong> Armature leggere, armature medie, scudi<br>
@@ -43,7 +45,7 @@
             </p>
         </main>
 
-        <main>
+        <main class="container">
             <h1>Equipaggiamento</h1>
             <p>
                 Inizi con il seguente equipaggiamento, oltre all'equipaggiamento fornito dal tuo background:
@@ -56,162 +58,166 @@
             
         </main>
 
-        <main>
+        <main class="container">
             <h1>Tabella riassuntiva per livello</h1>
             <p>
-                <table>
-                    <tr>
-                        <th>Livello</th>
-                        <th>Bonus Competenza</th>
-                        <th>Privilegi</th>
-                        <th>Ire</th>
-                        <th>Danno Ira</th>
-                    </tr>
-                    <tr>
-                        <td>1°</td>
-                        <td>+2</td>
-                        <td>Difesa Senza Armatura, Ira</td>
-                        <td>2</td>
-                        <td>+2</td>
-                    </tr>
-                    <tr>
-                        <td>2°</td>
-                        <td>+2</td>
-                        <td>attacco Incauto, Senso del Pericolo</td>
-                        <td>2</td>
-                        <td>+2</td>
-                    </tr>
-                    <tr>
-                        <td>3°</td>
-                        <td>+2</td>
-                        <td>Percorso Primordiale</td>
-                        <td>3</td>
-                        <td>+2</td>
-                    </tr>
-                    <tr>
-                        <td>4°</td>
-                        <td>+2</td>
-                        <td>Incremento Punteggio Caratteristica</td>
-                        <td>3</td>
-                        <td>+2</td>
-                    </tr>
-                    <tr>
-                        <td>5°</td>
-                        <td>+3</td>
-                        <td>Attacco Extra, Movimento Rapido</td>
-                        <td>3</td>
-                        <td>+2</td>
-                    </tr>
-                    <tr>
-                        <td>6°</td>
-                        <td>+3</td>
-                        <td>Privilegio del Percorso</td>
-                        <td>4</td>
-                        <td>+2</td>
-                    </tr>
-                    <tr>
-                        <td>7°</td>
-                        <td>+3</td>
-                        <td>Istinto Ferino</td>
-                        <td>4</td>
-                        <td>+2</td>
-                    </tr>
-                    <tr>
-                        <td>8°</td>
-                        <td>+3</td>
-                        <td>Incremento Punteggio Caratteristica</td>
-                        <td>4</td>
-                        <td>+2</td>
-                    </tr>
-                    <tr>
-                        <td>9°</td>
-                        <td>+4</td>
-                        <td>Critico Brutale(1 dado)</td>
-                        <td>4</td>
-                        <td>+3</td>
-                    </tr>
-                    <tr>
-                        <td>10°</td>
-                        <td>+4</td>
-                        <td>Privilegio del Percorso</td>
-                        <td>4</td>
-                        <td>+3</td>
-                    </tr>
-                    <tr>
-                        <td>11°</td>
-                        <td>+4</td>
-                        <td>Ira Implacabile</td>
-                        <td>4</td>
-                        <td>+3</td>
-                    </tr>
-                    <tr>
-                        <td>12°</td>
-                        <td>+4</td>
-                        <td>Incremento Punteggio Caratteristica</td>
-                        <td>5</td>
-                        <td>+3</td>
-                    </tr>
-                    <tr>
-                        <td>13°</td>
-                        <td>+5</td>
-                        <td>Critico Brutale(2 dadi)</td>
-                        <td>5</td>
-                        <td>+3</td>
-                    </tr>
-                    <tr>
-                        <td>14°</td>
-                        <td>+5</td>
-                        <td>Privilegio del Percorso</td>
-                        <td>5</td>
-                        <td>+3</td>
-                    </tr>
-                    <tr>
-                        <td>15°</td>
-                        <td>+5</td>
-                        <td>Ira Persistente</td>
-                        <td>5</td>
-                        <td>+3</td>
-                    </tr>
-                    <tr>
-                        <td>16°</td>
-                        <td>+5</td>
-                        <td>Incremento Punteggio Caratteristica</td>
-                        <td>5</td>
-                        <td>+4</td>
-                    </tr>
-                    <tr>
-                        <td>17°</td>
-                        <td>+6</td>
-                        <td>Critico Brutale(3 dadi)</td>
-                        <td>6</td>
-                        <td>+4</td>
-                    </tr>
-                    <tr>
-                        <td>18°</td>
-                        <td>+6</td>
-                        <td>Potenza Indomabile</td>
-                        <td>6</td>
-                        <td>+4</td>
-                    </tr>
-                    <tr>
-                        <td>19°</td>
-                        <td>+6</td>
-                        <td>Incremento Punteggio Caratteristica</td>
-                        <td>6</td>
-                        <td>+4</td>
-                    </tr>
-                    <tr>
-                        <td>20°</td>
-                        <td>+6</td>
-                        <td>Cambione Primordiale</td>
-                        <td>Illimitato</td>
-                        <td>+4</td>
-                    </tr>
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>Livello</th>
+                            <th>Bonus Competenza</th>
+                            <th>Privilegi</th>
+                            <th>Ire</th>
+                            <th>Danno Ira</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1°</td>
+                            <td>+2</td>
+                            <td>Difesa Senza Armatura, Ira</td>
+                            <td>2</td>
+                            <td>+2</td>
+                        </tr>
+                        <tr>
+                            <td>2°</td>
+                            <td>+2</td>
+                            <td>attacco Incauto, Senso del Pericolo</td>
+                            <td>2</td>
+                            <td>+2</td>
+                        </tr>
+                        <tr>
+                            <td>3°</td>
+                            <td>+2</td>
+                            <td>Percorso Primordiale</td>
+                            <td>3</td>
+                            <td>+2</td>
+                        </tr>
+                        <tr>
+                            <td>4°</td>
+                            <td>+2</td>
+                            <td>Incremento Punteggio Caratteristica</td>
+                            <td>3</td>
+                            <td>+2</td>
+                        </tr>
+                        <tr>
+                            <td>5°</td>
+                            <td>+3</td>
+                            <td>Attacco Extra, Movimento Rapido</td>
+                            <td>3</td>
+                            <td>+2</td>
+                        </tr>
+                        <tr>
+                            <td>6°</td>
+                            <td>+3</td>
+                            <td>Privilegio del Percorso</td>
+                            <td>4</td>
+                            <td>+2</td>
+                        </tr>
+                        <tr>
+                            <td>7°</td>
+                            <td>+3</td>
+                            <td>Istinto Ferino</td>
+                            <td>4</td>
+                            <td>+2</td>
+                        </tr>
+                        <tr>
+                            <td>8°</td>
+                            <td>+3</td>
+                            <td>Incremento Punteggio Caratteristica</td>
+                            <td>4</td>
+                            <td>+2</td>
+                        </tr>
+                        <tr>
+                            <td>9°</td>
+                            <td>+4</td>
+                            <td>Critico Brutale(1 dado)</td>
+                            <td>4</td>
+                            <td>+3</td>
+                        </tr>
+                        <tr>
+                            <td>10°</td>
+                            <td>+4</td>
+                            <td>Privilegio del Percorso</td>
+                            <td>4</td>
+                            <td>+3</td>
+                        </tr>
+                        <tr>
+                            <td>11°</td>
+                            <td>+4</td>
+                            <td>Ira Implacabile</td>
+                            <td>4</td>
+                            <td>+3</td>
+                        </tr>
+                        <tr>
+                            <td>12°</td>
+                            <td>+4</td>
+                            <td>Incremento Punteggio Caratteristica</td>
+                            <td>5</td>
+                            <td>+3</td>
+                        </tr>
+                        <tr>
+                            <td>13°</td>
+                            <td>+5</td>
+                            <td>Critico Brutale(2 dadi)</td>
+                            <td>5</td>
+                            <td>+3</td>
+                        </tr>
+                        <tr>
+                            <td>14°</td>
+                            <td>+5</td>
+                            <td>Privilegio del Percorso</td>
+                            <td>5</td>
+                            <td>+3</td>
+                        </tr>
+                        <tr>
+                            <td>15°</td>
+                            <td>+5</td>
+                            <td>Ira Persistente</td>
+                            <td>5</td>
+                            <td>+3</td>
+                        </tr>
+                        <tr>
+                            <td>16°</td>
+                            <td>+5</td>
+                            <td>Incremento Punteggio Caratteristica</td>
+                            <td>5</td>
+                            <td>+4</td>
+                        </tr>
+                        <tr>
+                            <td>17°</td>
+                            <td>+6</td>
+                            <td>Critico Brutale(3 dadi)</td>
+                            <td>6</td>
+                            <td>+4</td>
+                        </tr>
+                        <tr>
+                            <td>18°</td>
+                            <td>+6</td>
+                            <td>Potenza Indomabile</td>
+                            <td>6</td>
+                            <td>+4</td>
+                        </tr>
+                        <tr>
+                            <td>19°</td>
+                            <td>+6</td>
+                            <td>Incremento Punteggio Caratteristica</td>
+                            <td>6</td>
+                            <td>+4</td>
+                        </tr>
+                        <tr>
+                            <td>20°</td>
+                            <td>+6</td>
+                            <td>Cambione Primordiale</td>
+                            <td>Illimitato</td>
+                            <td>+4</td>
+                        </tr>
+                    </tbody>
                 </table>
             </p>
         </main>
 
-        <main>
+        <main class="container">
             <h1>Ira</h1>
             <p>
                 In battaglia, combatti animato da una ferocia primordiale. Durante il turno, puoi entrare in ira con un azione bonus. Mentre sei in ira, se non stai indossando armature pesanti ottieni i seguenti benefici:<br><br>
@@ -224,56 +230,56 @@
             </p>
         </main>
 
-        <main>
+        <main class="container">
             <h1>Difesa Senza Armatura</h1>
             <p>
                 Mentre non indossi nessuna armatura, la tua Classe Armatura è pari a 10 + il tuo modificatore di Destrezza + il tuo modificatore di costituzione. Puoi comunque usare lo scudo e trarre il beneficio di questo privileggio.
             </p>
         </main>
 
-        <main>
+        <main class="container">
             <h1>Attacco Incauto</h1>
             <p>
                 A partire dal 2° livello, puoi gettare via ogni preoccupazione di difenderti per attaccare spinto da una feroce disperazione. Quando effettui il tuo primo attacco del turno, puoi decidere se effettuare un attacco incauto. Farlo ti dà vantaggio ai tiri di attacco con armi da mischia che usano la Forza durante questo turno, ma i tiri di attacco contro di te hanno vantaggio fino al tuo prossimo turno.
             </p>
         </main>
 
-        <main>
+        <main class="container">
             <h1>Senso del Pericolo</h1>
             <p>
                 Dal 2° livello hai vantaggio ai tiri salvezza di Destrezza contro effetti che puoi vedere, come trappole e incantesimi. Per tenere questo beneficio, non devi essere accecato, assordato nè inabile.
             </p>
         </main>
 
-        <main>
+        <main class="container">
             <h1>Percorso Primordiale</h1>
             <p>
                 Al 3° livello, scegli un percorso che modella la natura della tua ira. Scegli il Percorso del Berserker o il Percorso del Combatente Totemico, entrambi dettagliati al termine della descrizione della classe. Entrambi ti conferiscono privilegi al 3° livello e poi ancora al 6°, 10° e 14° livello.
             </p>
         </main>
 
-        <main>
+        <main class="container">
             <h1>Incremento di Punteggio di Caratteristica</h1>
             <p>
                 Quando raggiungi il 4° livello, e poi ancora all'8°, 12°, 16° e 19° livello, puoi incrementare un tuo punteggio di Caratteristica di 2, o incrementare due punteggi delle caratteristiche di 1. Di norma, utilizzando questo privilegio non puoi accrescere un punteggio di Caratteristica oltre il 20.
             </p>
         </main>
 
-        <main>
+        <main class="container">
             <h1>Attacco Extra</h1>
             <p>
                 A partire dal 5° livello, puoi attaccare due volte, invece che una volta, ogni volta che effettui l'azione Attaccare durante il tuo turno.
             </p>
         </main>
 
-        <main>
+        <main class="container">
             <h1>Movimento Veloce</h1>
             <p>
                 A partire dal 5° livello, la tua velocità aumenta di 3 metri quando indossi armature pesanti.
             </p>
         </main>
 
-        <main>
+        <main class="container">
             <h1>Istinto Ferino</h1>
             <p>
                 Dal 7° livello, i tuoi istinti sono così affinati che hai vantaggio ai tiri di iniziativa.<br>
@@ -281,7 +287,7 @@
             </p>
         </main>
 
-        <main>
+        <main class="container">
             <h1>Critico Brutale</h1>
             <p>
                 a partire dal 9° livello, puoi tirare un dado di danno aggiuntivo per l'arma quando determini il danno aggiuntivo di un colpo critico con un attacco da mischia.<br>
@@ -289,7 +295,7 @@
             </p>
         </main>
 
-        <main>
+        <main class="container">
             <h1>Ira Implacabile</h1>
             <p>
                 A partire dall'11° livello, la tua ira può farti continuare a combattere nonostante le ferite più gravi. Se scendi a 0 punti ferita mentre sei in ira, e non muori sul colpo, puoi effettuare un tiro salvezza di Costituzione CD 10. Se lo riesci, scendi invece a 1 punto ferita.<br>
@@ -297,26 +303,26 @@
             </p>
         </main>
 
-        <main>
+        <main class="container">
             <h1>Ira Persistente</h1>
             <p>
                 A partire dal 15° livello, la tua ira è cosi feroce che termina prima solo se cadi svenuto o decidi di terminarla in anticipo. 
             </p>
         </main>
 
-        <main>
+        <main class="container">
             <h1>Potenza Indomabile</h1>
             <p>A partire dal 18° livello, se il totale di una tua prova di Forza è inferiore del tuo punteggio di Forza, puoi usare il tuo punteggio di forza al posto del risultato della prova.</p>
         </main>
 
-        <main>
+        <main class="container">
             <h1>Campione Primordiale</h1>
             <p>
                 Al 20° livello, incarni il potere delle terre selvagge. I tupoi punti di Forza e Costituzione aumentano di 4. Il tuo massimo per quasti punteggi diventa 24.
             </p>
         </main>
 
-        <main>
+        <main class="container">
             <h1>Percorsi Primordiali</h1>
             <p>
                 L'ira brucia nel cuore di tutti i barbari, una fornace che li guida alla grandezza. Ciascun barbaro attribuisce la sua ira ad una forte diversa. Per alcuni si tratta di una riserva interiore in cui dolore, sofferenza e rabbia si forgiano in una furia dura come l'acciaio. Altri la vedono come una benedizione spirituale, un dono di un animale totemico.

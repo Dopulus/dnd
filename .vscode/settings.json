@@ -2,5 +2,7 @@
     "liveServer.settings.port": 5503,
     "githubPullRequests.ignoredPullRequestBranches": [
         "main"
-    ]
+    ],
+    "files.autoSave": "afterDelay",
+    "editor.cursorStyle": "line"
 }
