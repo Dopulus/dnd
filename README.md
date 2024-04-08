@@ -1,4 +1,4 @@
-# sito per la Creazione di Personaggi per D&D
+# Sito per la Creazione di Personaggi per D&D
 
 ## Introduzione
 
