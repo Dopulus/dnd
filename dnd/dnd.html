@@ -3,11 +3,11 @@
 <html lang="it">
     <head>
         <meta charset="UTF-8">
+        <meta name="author" content="dopulus">
+        <meta version="1.0">
         <title>Creazione Personaggio D&D</title>
         <link rel="stylesheet" href="dnd.css">
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
         <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
-        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
         <script src="dnd.js"></script>
     </head>
     <body>
@@ -18,13 +18,14 @@
         </div>
 
         <div class="corpo">
-            <p>
-                Qui a fianco c'è una guida che ti può servire ad aiutarti alla creazione del personaggio.
-                <a href="../guida/guida.html">Guida</a>
+            <p id="int">
+                Benvenuto Avventuriero! Questo è un sito che ti permette di creare un personaggio per il gioco di ruolo Dungeons and Dragons.<br><br>
+                Qui a fianco c'è una guida che ti può servire ad aiutarti alla creazione del personaggio.<a href="../guida/guida.html">Guida</a><br><br>
+                Qui sotto invece ci sono dei campi da compilare per creare il tuo personaggio, segui le istruzioni e buona creazione!
             </p>
         </div>
 
-        <div class="corpo container">
+        <div class="corpo">
             <form id="flex">
                 <p>
                     <label for="nome">Nome:</label>
@@ -50,8 +51,114 @@
             </form>
         </div>
 
-        <div class="corpo container">
-            <!--per questa parte implementare che la scelta delle cose in classe, razza, allineamento, background impostano le cose nella pagina prova creata nel js-->
+        <div id="colonna">
+            <div class="corpo">
+                <form id="flex">
+                    <table id="table1">
+                        <tr>
+                            <th><label for="nome">Nome:</label></th>
+                            <th><label for="eta">Età:</label></th>
+                            <th><label for="altezza">Altezza:</label></th>
+                            <th><label for="peso">Peso:</label></th>
+                            <th><label for="genere">Genere:</label></th>
+                        </tr>
+                        <tr>
+                            <td><input type="text" id="nome" name="nome" required></td>
+                            <td><input type="number" id="eta" name="eta" min="1" max="1000" required></td>
+                            <td><input type="number" id="altezza" name="altezza" min="1" max="300" required></td>
+                            <td><input type="number" id="peso" name="peso" min="1" max="300" required></td>
+                            <td>
+                                <select id="genere" name="genere">
+                                    <option value="------">------</option>
+                                    <option value="maschio">Maschio</option>
+                                    <option value="femmina">Femmina</option>
+                                    <option value="altro">Altro</option>
+                            </td>
+                            </select>
+                        </tr>
+                    </table>
+                </form>
+            </div>
+            <div class="corpo">
+                <form id="flex">
+                    <table id="table1">
+                        <tr>
+                            <th><label for="classe">Classe:</label></th>
+                            <th><label for="razza">Razza:</label></th>
+                            <th><label for="allineamento">Allineamento:</label></th>
+                            <th><label for="background">Background:</label></th>
+                        </tr>
+                        <tr>
+                            <td>
+                                <select id="classe" name="classe">
+                                    <option value="------">------</option>
+                                    <option value="barbaro">Barbaro</option>
+                                    <option value="bardo">Bardo</option>
+                                    <option value="chierico">Chierico</option>
+                                    <option value="druido">Druido</option>
+                                    <option value="guerriero">Guerriero</option>
+                                    <option value="ladro">Ladro</option>
+                                    <option value="mago">Mago</option>
+                                    <option value="monaco">Monaco</option>
+                                    <option value="paladino">Paladino</option>
+                                    <option value="ranger">Ranger</option>
+                                    <option value="stregone">Stregone</option>
+                                    <option value="warlock">Warlock</option>
+                                </select>
+                            </td>
+                            <td>
+                                <select id="razza" name="razza">
+                                    <option value="------">------</option>
+                                    <otion value="dregonide">Dregonide</option>
+                                    <option value="elfo">Elfo</option>
+                                    <option value="halfling">Halfling</option>
+                                    <option value="nano">Nano</option>
+                                    <option value="umano">Umano</option>
+                                    <option value="mezzelfo">Mezzelfo</option>
+                                    <option value="mezzorco">Mezzorco</option>
+                                    <option value="gnomo">Gnomo</option>
+                                </select>
+                            </td>
+                            <td>
+                                <select id="allineamento" name="allineamento">
+                                    <option value="------">------</option>
+                                    <option value="legale buono">Legale Buono</option>
+                                    <option value="neutrale buono">Neutrale Buono</option>
+                                    <option value="caotico buono">Caotico Buono</option>
+                                    <option value="legale neutrale">Legale Neutrale</option>
+                                    <option value="neutrale">Neutrale</option>
+                                    <option value="caotico neutrale">Caotico Neutrale</option>
+                                    <option value="legale malvagio">Legale Malvagio</option>
+                                    <option value="neutrale malvagio">Neutrale Malvagio</option>
+                                    <option value="caotico malvagio">Caotico Malvagio</option>
+                                </select>
+                            </td>
+                            <td>
+                                <select id="background" name="background">
+                                    <option value="------">------</option>
+                                    <option value="acolito">Acolito</option>
+                                    <option value="artigiano">Artigiano della Gilda</option>
+                                    <option value="ciarlatano">Ciarlatano</option>
+                                    <option value="criminale">Criminale</option>
+                                    <option value="eremita">Eremita</option>
+                                    <option value="EroePopolere">Eroe del Popolo</option>
+                                    <option value="nobile">Nobile</option>
+                                    <option value="forestiero">Forestiero</option>
+                                    <option value="intrattenitore">Intrattenitore</option>
+                                    <option value="marinaio">Marinaio</option>
+                                    <option value="monello">Monello</option>
+                                    <option value="sapiente">Sapiente</option>
+                                    <option value="soldato">Soldato</option>
+                                </select>
+                            </td>
+                        </tr>
+                    </table>
+                </form>
+            </div>
+        </div>
+
+
+        <div class="corpo">
             <form id="flex">
                 <p>
                     <label for="classe">Classe:</label>
@@ -119,90 +226,94 @@
             </form>
         </div>
 
-        <div class="corpo container">
+        <div class="corpo">
             <form id="flex">
                 <p>
-                    <!--mettere la velocità predefinita di ogni razza-->
                     <label for="velocita">Velocità:</label>
                     <input type="number" id="velocita" name="velocita" min="1" max="100" required >m
                 </p>
 
                 <p>
-                    <!--mettere la classe armatura predefinita del personaggio cioè 10 + modificatore di destrezza-->
                     <label for="ca">Classe Armatura:</label>
                     <input type="number" id="ca" name="ca" min="1" max="100" required>
                 </p>
 
                 <p>
-                    <!--mettere l'iniziativa predefinita cioè destrezza-->
                     <label for="iniziativa">Iniziativa:</label>
-                    <input type="number" id="iniziativa" name="iniziativa" min="1" max="100" value="destrezza-mod" required>
+                    <input type="number" id="iniziativa" name="iniziativa" min="1" max="100" required>
                 </p>
 
                 <p>
-                    <!--mettere i dadi vita che appare mettendo il dado della classe per livello tipo barbaro ha un 1d12 al livello 1 o 3d12 al livello 3-->
                     <label for="dadiVita">Dadi Vita:</label>
                     <input type="number" id="dadiVita" name="dadiVita" min="1" max="100" required>
                 </p>
 
                 <p>
-                    <!--mettere il bonus competenza predefinito cioè 2 ma che ogni qualche livello aumenta-->
                     <label for="bonusCompetenza">Bonus competenza:</label>
                     <input type="number" id="bonusCompetenza" name="bonusCompetenza" min="1" max="100" required>  
                 </p>
 
                 <p>
-                    <!--mettere i punti vita iniziali predefiniti cioè il massimo del dado vita al primo livello + costituzione e poi per ogni livello prendere la metà del dado per eccesso+ costituzione-->
                     <label for="puntiVita">Punti Vita iniziali:</label>
                     <input type="number" id="puntiVita" name="puntiVita" min="1" max="100" required>
                 </p>
             </form>
         </div>
 
-        <div class="corpo container">
+        <div class="corpo">
             <form id="prova">
                 <p>Statistiche:</p>
-                <p>
-                    <label for="forza">Forza</label>
-                    <input type="number" id="forza" name="forza" min="1" max="20" required>
-                    <span id="forza-mod"></span>
-                </p>
-                <p>
-                    <label for="destrezza">Destrezza</label>
-                    <input type="number" id="destrezza" name="destrezza" min="1" max="20" required>
-                    <span id="destrezza-mod"></span>
-                </p>
-                <p>
-                    <label for="costituzione">Costituzione</label>
-                    <input type="number" id="costituzione" name="costituzione" min="1" max="20" required>
-                    <span id="costituzione-mod"></span>
-                </p>
-                <p>
-                    <label for="intelligenza">Intelligenza</label>
-                    <input type="number" id="intelligenza" name="intelligenza" min="1" max="20" required>
-                    <span id="intelligenza-mod"></span>
-                </p>
-                <p>
-                    <label for="saggezza">Saggezza</label>
-                    <input type="number" id="saggezza" name="saggezza" min="1" max="20" required>
-                    <span id="saggezza-mod"></span>
-                </p>
-                <p>
-                    <label for="carisma">Carisma</label>
-                    <input type="number" id="carisma" name="carisma" min="1" max="20" required>
-                    <span id="carisma-mod"></span>
-                </p>   
-                <p>
-                    <button id="rollButton">Roll Statistiche</button>
-                </p>
+                <table>
+                    <tr>
+                        <th>Caratteristica</th>
+                        <th>Valore</th>
+                        <th>Modificatore</th>
+                        <th></th>
+                    </tr>
+                    <tr>
+                        <th>Forza</th>
+                        <td><input style="width: 30px;" type="number" id="forza" name="forza" min="1" max="20" readonly></td>
+                        <td id="forzaModifier"></td>
+                        <td><button type="button" onclick="rollForza(); calculateModifier('forza', 'forzaModifier');">Roll Statistica</button></td>
+                    </tr>
+                    <tr>
+                        <th>Destrezza</th>
+                        <td><input style="width: 30px;" type="number" id="destrezza" name="destrezza" min="1" max="20" readonly></td>
+                        <td id="destrezzaModifier"></td>
+                        <td><button type="button" onclick="rollDestrezza(); calculateModifier('destrezza', 'destrezzaModifier')">Roll Statistica</button></td>
+                    </tr>
+                    <tr>
+                        <th>Costituzione</th>
+                        <td><input style="width: 30px;" type="number" id="costituzione" name="costituzione" min="1" max="20" readonly></td>
+                        <td id="costituzioneModifier"></td>
+                        <td><button type="button" onclick="rollCostituzione(); calculateModifier('costituzione', 'costituzioneModifier')">Roll Statistica</button></td>
+                    </tr>
+                    <tr>
+                        <th>Intelligenza</th>
+                        <td><input style="width: 30px;" type="number" id="intelligenza" name="intelligenza" min="1" max="20" readonly></td>
+                        <td id="intelligenzaModifier"></td>
+                        <td><button type="button" onclick="rollIntelligenza(); calculateModifier('intelligenza', 'intelligenzaModifier')">Roll Statistica</button></td>
+                    </tr>
+                    <tr>
+                        <th>Saggezza</th>
+                        <td><input style="width: 30px;" type="number" id="saggezza" name="saggezza" min="1" max="20" readonly></td>
+                        <td id="saggezzaModifier"></td>
+                        <td><button type="button" onclick="rollSaggezza(); calculateModifier('saggezza', 'saggezzaModifier')">Roll Statistica</button></td>
+                    </tr>
+                    <tr>
+                        <th>Carisma</th>
+                        <td><input style="width: 30px;" type="number" id="carisma" name="carisma" min="1" max="20" readonly></td>
+                        <td id="carismaModifier"></td>
+                        <td><button type="button" onclick="rollCarisma(); calculateModifier('carisma', 'carismaModifier')">Roll Statistica</button></td>
+                    </tr>
+                </table>
             </form>
         </div>
 
-        <div class="corpo container">
+        <div class="corpo">
             <div id="colonna">  
                 <form>        
                     <p>
-                        <!--qui deve decidere che abilità ha con la classe-->
                         <label for="abilita">Abilità:</label><br>
                         <input type="checkbox" name="Acrobazia" value="Acrobazia">Acrobazia</span><br>
                         <input type="checkbox" name="Addestrare animali" value="Addestrare animali">Addestrare animali<br>
@@ -228,14 +339,12 @@
 
                     <p>
                         <label for="tiriSalvezza">Tiri Salvezza:</label><br>
-                        <!--qui deve apparire che tiri salvezza ha il personaggio-->
                     </p>
                 </form>
             </div>
 
             <form>
                 <p>
-                    <!--Qui ci deve apparire quante lingue sa apparte quella predefinita dalla razza-->
                     <label for="lingue">Lingue:</label><br>
                     <input type="checkbox" name="comune" value="comune">Comune<br>
                     <input type="checkbox" name="elfico" value="elfico">Elfico<br>
@@ -258,12 +367,11 @@
                 
                 <p>
                     <label for="equipaggiamento">Equipaggiamento:</label><br>
-                    <!--Qua ci va qualcosa che quando scegli la classe e il background appare equipaggiamento-->
                 </p>
             </form>
         </div>
 
-        <div class="corpo container">
+        <div class="corpo">
             <div id="colonna">
                 <form>
                     <p>
@@ -283,7 +391,7 @@
             </div>
         </div>
 
-        <div class="corpo container">
+        <div class="corpo">
             <div id="flex">
                 <form>
                     <input type="submit" value="Salva personaggio">

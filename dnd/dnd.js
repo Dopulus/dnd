@@ -1,42 +1,76 @@
-function rollStats(event) {
-    event.preventDefault();
-    let stats = [];
-    for (let i = 0; i < 6; i++) {
-        let rolls = [];
-        for (let j = 0; j < 4; j++) {
-            rolls.push(Math.floor(Math.random() * 6) + 1);
-        }
-        rolls.sort();
-        rolls.shift();
-        let sum = rolls.reduce((a, b) => a + b, 0);
-        stats.push(sum);
-    }
-
-    stats.sort((a, b) => b - a);
-    document.getElementById("forza").value = stats[0];
-    document.getElementById("destrezza").value = stats[1];
-    document.getElementById("costituzione").value = stats[2];
-    document.getElementById("intelligenza").value = stats[3];
-    document.getElementById("saggezza").value = stats[4];
-    document.getElementById("carisma").value = stats[5];
-
-    let modifiers = [];
-    for (let i = 0; i < stats.length; i++) {
-        let modifier = Math.floor((stats[i] - 10) / 2);
-        modifiers.push(modifier);
-    }
-    document.getElementById("forza-mod").textContent = modifiers[0];
-    document.getElementById("destrezza-mod").textContent = modifiers[1];
-    document.getElementById("costituzione-mod").textContent = modifiers[2];
-    document.getElementById("intelligenza-mod").textContent = modifiers[3];
-    document.getElementById("saggezza-mod").textContent = modifiers[4];
-    document.getElementById("carisma-mod").textContent = modifiers[5];
+function rollForza() {
+    let stat = Math.floor(Math.random() * 11) + 8;
+    document.getElementById('forza').value = stat;
 }
 
-window.onload = function() {
-    document.getElementById('rollButton').addEventListener('click', rollStats);
-}  
+function rollDestrezza() {
+    let stat = Math.floor(Math.random() * 11) + 8;
+    document.getElementById('destrezza').value = stat;
+}
 
+function rollCostituzione() {
+    let stat = Math.floor(Math.random() * 11) + 8;
+    document.getElementById('costituzione').value = stat;
+}
+
+function rollIntelligenza() {
+    let stat = Math.floor(Math.random() * 11) + 8;
+    document.getElementById('intelligenza').value = stat;
+}
+
+function rollSaggezza() {
+    let stat = Math.floor(Math.random() * 11) + 8;
+    document.getElementById('saggezza').value = stat;
+}
+
+function rollCarisma() {
+    let stat = Math.floor(Math.random() * 11) + 8;
+    document.getElementById('carisma').value = stat;
+}
+
+document.querySelector('form').addEventListener('submit', function(event) {
+    event.preventDefault();
+});
+
+document.addEventListener('DOMContentLoaded', (event) => {
+    // Aggiungi un event listener per l'evento 'change' a ogni input
+    ['forza', 'destrezza', 'costituzione', 'intelligenza', 'saggezza', 'carisma'].forEach(id => {
+        document.getElementById(id).addEventListener('change', function() {
+            // Calcola il modificatore ogni volta che il valore dell'input cambia
+            let modifier = calculateModifier(id);
+            // Scrivi il modificatore nell'elemento di output
+            document.getElementById(id + 'Modifier').innerText = modifier;
+        });
+    });
+});
+
+function calculateModifier(inputId, outputId) {
+    // Prendi il valore dall'input
+    let value = Number(document.getElementById(inputId).value);
+
+    // Controlla il valore e assegna il modificatore corrispondente
+    let modifier;
+    if (value >= 8 && value <= 9) {
+        modifier = -1;
+    } else if (value >= 10 && value <= 11) {
+        modifier = 0;
+    } else if (value >= 12 && value <= 13) {
+        modifier = 1;
+    } else if (value >= 14 && value <= 15) {
+        modifier = 2;
+    } else if (value >= 16 && value <= 17) {
+        modifier = 3;
+    } else if (value >= 18 && value <= 19) {
+        modifier = 4;
+    } else if (value == 20) {
+        modifier = 5;
+    } else {
+        modifier = "Valore non valido";
+    }
+
+    // Scrivi il modificatore nell'elemento di output
+    document.getElementById(outputId).innerText = modifier;
+}
 document.addEventListener('DOMContentLoaded', function() {
     document.getElementById('classe').addEventListener('change', function() {
         var classe = this.value;
@@ -126,7 +160,7 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 
-document.addEventListener('DOMContentLoaded', function () {
+/*document.addEventListener('DOMContentLoaded', function () {
     const form = document.getElementById('myForm');
     const corpoDivs = document.querySelectorAll('.corpo');
 
@@ -151,4 +185,4 @@ document.addEventListener('DOMContentLoaded', function () {
             alert('Compila tutti i campi del form prima di procedere.');
         }
     });
-});
+});*/
