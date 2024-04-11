@@ -20,245 +20,167 @@
         <div class="corpo">
             <p id="int">
                 Benvenuto Avventuriero! Questo è un sito che ti permette di creare un personaggio per il gioco di ruolo Dungeons and Dragons.<br><br>
-                Qui a fianco c'è una guida che ti può servire ad aiutarti alla creazione del personaggio.<a href="../guida/guida.html">Guida</a><br><br>
+                Qui a fianco c'è una guida che ti può servire ad aiutarti alla creazione del personaggio. <a href="../guida/guida.html">Guida</a><br><br>
                 Qui sotto invece ci sono dei campi da compilare per creare il tuo personaggio, segui le istruzioni e buona creazione!
             </p>
         </div>
 
-        <div class="corpo">
-            <form id="flex">
-                <p>
-                    <label for="nome">Nome:</label>
-                    <input type="text" id="nome" name="nome" required>
-
-                    <label for="eta">Età:</label>
-                    <input type="number" id="eta" name="eta" min="1" max="1000" required>
-
-                    <label for="altezza">Altezza:</label>
-                    <input type="number" id="altezza" name="altezza" min="1" max="300" required>
-
-                    <label for="peso">Peso:</label>
-                    <input type="number" id="peso" name="peso" min="1" max="300" required>
-
-                    <label for="genere">Genere:</label>
-                    <select id="genere" name="genere">
-                        <option value="------">------</option>
-                        <option value="maschio">Maschio</option>
-                        <option value="femmina">Femmina</option>
-                        <option value="altro">Altro</option>
-                    </select>
-                </p>
-            </form>
-        </div>
-
-        <div id="colonna">
+        <div id="div-esterno" style="display: flex;">
             <div class="corpo">
-                <form id="flex">
+                <form id="flex" >
                     <table id="table1">
                         <tr>
                             <th><label for="nome">Nome:</label></th>
-                            <th><label for="eta">Età:</label></th>
-                            <th><label for="altezza">Altezza:</label></th>
-                            <th><label for="peso">Peso:</label></th>
-                            <th><label for="genere">Genere:</label></th>
+                            <td><input type="text" id="nome" name="nome" required></td>
                         </tr>
                         <tr>
-                            <td><input type="text" id="nome" name="nome" required></td>
+                            <th><label for="eta">Età:</label></th>
                             <td><input type="number" id="eta" name="eta" min="1" max="1000" required></td>
+                        </tr>
+                        <tr>
+                            <th><label for="altezza">Altezza:</label></th>
                             <td><input type="number" id="altezza" name="altezza" min="1" max="300" required></td>
+                        </tr>
+                        <tr>
+                            <th><label for="peso">Peso:</label></th>
                             <td><input type="number" id="peso" name="peso" min="1" max="300" required></td>
+                        </tr>
+                        <tr>
+                            <th><label for="genere">Genere:</label></th>
                             <td>
                                 <select id="genere" name="genere">
                                     <option value="------">------</option>
                                     <option value="maschio">Maschio</option>
                                     <option value="femmina">Femmina</option>
                                     <option value="altro">Altro</option>
+                                </select>
                             </td>
-                            </select>
                         </tr>
                     </table>
                 </form>
             </div>
+
             <div class="corpo">
                 <form id="flex">
                     <table id="table1">
-                        <tr>
-                            <th><label for="classe">Classe:</label></th>
-                            <th><label for="razza">Razza:</label></th>
-                            <th><label for="allineamento">Allineamento:</label></th>
-                            <th><label for="background">Background:</label></th>
-                        </tr>
-                        <tr>
-                            <td>
-                                <select id="classe" name="classe">
-                                    <option value="------">------</option>
-                                    <option value="barbaro">Barbaro</option>
-                                    <option value="bardo">Bardo</option>
-                                    <option value="chierico">Chierico</option>
-                                    <option value="druido">Druido</option>
-                                    <option value="guerriero">Guerriero</option>
-                                    <option value="ladro">Ladro</option>
-                                    <option value="mago">Mago</option>
-                                    <option value="monaco">Monaco</option>
-                                    <option value="paladino">Paladino</option>
-                                    <option value="ranger">Ranger</option>
-                                    <option value="stregone">Stregone</option>
-                                    <option value="warlock">Warlock</option>
-                                </select>
-                            </td>
-                            <td>
-                                <select id="razza" name="razza">
-                                    <option value="------">------</option>
-                                    <otion value="dregonide">Dregonide</option>
-                                    <option value="elfo">Elfo</option>
-                                    <option value="halfling">Halfling</option>
-                                    <option value="nano">Nano</option>
-                                    <option value="umano">Umano</option>
-                                    <option value="mezzelfo">Mezzelfo</option>
-                                    <option value="mezzorco">Mezzorco</option>
-                                    <option value="gnomo">Gnomo</option>
-                                </select>
-                            </td>
-                            <td>
-                                <select id="allineamento" name="allineamento">
-                                    <option value="------">------</option>
-                                    <option value="legale buono">Legale Buono</option>
-                                    <option value="neutrale buono">Neutrale Buono</option>
-                                    <option value="caotico buono">Caotico Buono</option>
-                                    <option value="legale neutrale">Legale Neutrale</option>
-                                    <option value="neutrale">Neutrale</option>
-                                    <option value="caotico neutrale">Caotico Neutrale</option>
-                                    <option value="legale malvagio">Legale Malvagio</option>
-                                    <option value="neutrale malvagio">Neutrale Malvagio</option>
-                                    <option value="caotico malvagio">Caotico Malvagio</option>
-                                </select>
-                            </td>
-                            <td>
-                                <select id="background" name="background">
-                                    <option value="------">------</option>
-                                    <option value="acolito">Acolito</option>
-                                    <option value="artigiano">Artigiano della Gilda</option>
-                                    <option value="ciarlatano">Ciarlatano</option>
-                                    <option value="criminale">Criminale</option>
-                                    <option value="eremita">Eremita</option>
-                                    <option value="EroePopolere">Eroe del Popolo</option>
-                                    <option value="nobile">Nobile</option>
-                                    <option value="forestiero">Forestiero</option>
-                                    <option value="intrattenitore">Intrattenitore</option>
-                                    <option value="marinaio">Marinaio</option>
-                                    <option value="monello">Monello</option>
-                                    <option value="sapiente">Sapiente</option>
-                                    <option value="soldato">Soldato</option>
-                                </select>
-                            </td>
-                        </tr>
-                    </table>
-                </form>
+                            <tr>
+                                <th><label for="classe">Classe:</label></th>
+                                <td>
+                                    <select id="classe" name="classe">
+                                        <option value="------">------</option>
+                                        <option value="barbaro">Barbaro</option>
+                                        <option value="bardo">Bardo</option>
+                                        <option value="chierico">Chierico</option>
+                                        <option value="druido">Druido</option>
+                                        <option value="guerriero">Guerriero</option>
+                                        <option value="ladro">Ladro</option>
+                                        <option value="mago">Mago</option>
+                                        <option value="monaco">Monaco</option>
+                                        <option value="paladino">Paladino</option>
+                                        <option value="ranger">Ranger</option>
+                                        <option value="stregone">Stregone</option>
+                                        <option value="warlock">Warlock</option>
+                                    </select>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th><label for="razza">Razza:</label></th>
+                                <td>
+                                    <select id="razza" name="razza">
+                                        <option value="------">------</option>
+                                        <option value="dregonide">Dregonide</option>
+                                        <option value="elfo">Elfo</option>
+                                        <option value="halfling">Halfling</option>
+                                        <option value="nano">Nano</option>
+                                        <option value="umano">Umano</option>
+                                        <option value="mezzelfo">Mezzelfo</option>
+                                        <option value="mezzorco">Mezzorco</option>
+                                        <option value="gnomo">Gnomo</option>
+                                    </select>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th><label for="allineamento">Allineamento:</label></th>
+                                <td>
+                                    <select id="allineamento" name="allineamento">
+                                        <option value="------">------</option>
+                                        <option value="legale buono">Legale Buono</option>
+                                        <option value="neutrale buono">Neutrale Buono</option>
+                                        <option value="caotico buono">Caotico Buono</option>
+                                        <option value="legale neutrale">Legale Neutrale</option>
+                                        <option value="neutrale">Neutrale</option>
+                                        <option value="caotico neutrale">Caotico Neutrale</option>
+                                        <option value="legale malvagio">Legale Malvagio</option>
+                                        <option value="neutrale malvagio">Neutrale Malvagio</option>
+                                        <option value="caotico malvagio">Caotico Malvagio</option>
+                                    </select>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th><label for="background">Background:</label></th>
+                                <td>
+                                    <select id="background" name="background">
+                                        <option value="------">------</option>
+                                        <option value="acolito">Acolito</option>
+                                        <option value="artigiano">Artigiano della Gilda</option>
+                                        <option value="ciarlatano">Ciarlatano</option>
+                                        <option value="criminale">Criminale</option>
+                                        <option value="eremita">Eremita</option>
+                                        <option value="EroePopolere">Eroe del Popolo</option>
+                                        <option value="nobile">Nobile</option>
+                                        <option value="forestiero">Forestiero</option>
+                                        <option value="intrattenitore">Intrattenitore</option>
+                                        <option value="marinaio">Marinaio</option>
+                                        <option value="monello">Monello</option>
+                                        <option value="sapiente">Sapiente</option>
+                                        <option value="soldato">Soldato</option>
+                                    </select>
+                                </td>
+                            </tr>
+                        </table>
+                    </form>
+                </div>
+                <div class="corpo">
+                    <form id="flex">
+                        <table id="table1">
+                            <tr>
+                                <th><label for="livello">Livello:</label></th>
+                                <td><input type="number" id="livello" name="livello" min="1" max="20" required></td>
+                            </tr>
+                            <tr>
+                                <th><label for="taglia">Taglia:</label></th>
+                                <td>
+                                    <select id="taglia" name="taglia">
+                                        <option value="------">------</option>
+                                        <option value="minuscola">Minuscola</option>
+                                        <option value="piccola">Piccola</option>
+                                        <option value="media">Media</option>
+                                        <option value="grande">Grande</option>
+                                        <option value="enorme">Enorme</option>
+                                        <option value="mastodontica">Mastodontica</option>
+                                    </select>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th><label for="velocita">Velocità:</label></th>
+                                <td><input type="number" id="velocita" name="velocita" min="1" max="100" required >m</td>
+                            </tr>
+                            <tr>
+                                <th><label for="ca">Classe Armatura:</label></th>
+                                <td><input type="number" id="ca" name="ca" min="1" max="100" required></td>
+                            </tr>
+                            <tr>
+                                <th><label for="iniziativa">Iniziativa:</label></th>
+                                <td><input type="number" id="iniziativa" name="iniziativa" min="1" max="100" required></td>
+                            </tr>
+                            <tr>
+                                <th><label for="dadiVita">Dadi Vita:</label></th>
+                                <td><input type="number" id="dadiVita" name="dadiVita" min="1" max="100" required></td>
+                            </tr>
+                        </table>
+                    </form>
+                </div>
             </div>
-        </div>
-
-
-        <div class="corpo">
-            <form id="flex">
-                <p>
-                    <label for="classe">Classe:</label>
-                    <select id="classe" name="classe">
-                        <option value="------">------</option>
-                        <option value="barbaro">Barbaro</option>
-                        <option value="bardo">Bardo</option>
-                        <option value="chierico">Chierico</option>
-                        <option value="druido">Druido</option>
-                        <option value="guerriero">Guerriero</option>
-                        <option value="ladro">Ladro</option>
-                        <option value="mago">Mago</option>
-                        <option value="monaco">Monaco</option>
-                        <option value="paladino">Paladino</option>
-                        <option value="ranger">Ranger</option>
-                        <option value="stregone">Stregone</option>
-                        <option value="warlock">Warlock</option>
-                    </select>
-
-                    <label for="razza">Razza:</label>
-                    <select id="razza" name="razza">
-                        <option value="------">------</option>
-                        <otion value="dregonide">Dregonide</option>
-                        <option value="elfo">Elfo</option>
-                        <option value="halfling">Halfling</option>
-                        <option value="nano">Nano</option>
-                        <option value="umano">Umano</option>
-                        <option value="mezzelfo">Mezzelfo</option>
-                        <option value="mezzorco">Mezzorco</option>
-                        <option value="gnomo">Gnomo</option>
-                    </select>
-
-                    <label for="allineamento">Allineamento:</label>
-                    <select id="allineamento" name="allineamento">
-                        <option value="------">------</option>
-                        <option value="legale buono">Legale Buono</option>
-                        <option value="neutrale buono">Neutrale Buono</option>
-                        <option value="caotico buono">Caotico Buono</option>
-                        <option value="legale neutrale">Legale Neutrale</option>
-                        <option value="neutrale">Neutrale</option>
-                        <option value="caotico neutrale">Caotico Neutrale</option>
-                        <option value="legale malvagio">Legale Malvagio</option>
-                        <option value="neutrale malvagio">Neutrale Malvagio</option>
-                        <option value="caotico malvagio">Caotico Malvagio</option>
-                    </select>
-
-                    <label for="background">Background:</label>
-                    <select id="background" name="background">
-                        <option value="------">------</option>
-                        <option value="acolito">Acolito</option>
-                        <option value="artigiano">Artigiano della Gilda</option>
-                        <option value="ciarlatano">Ciarlatano</option>
-                        <option value="criminale">Criminale</option>
-                        <option value="eremita">Eremita</option>
-                        <option value="EroePopolere">Eroe del Popolo</option>
-                        <option value="nobile">Nobile</option>
-                        <option value="forestiero">Forestiero</option>
-                        <option value="intrattenitore">Intrattenitore</option>
-                        <option value="marinaio">Marinaio</option>
-                        <option value="monello">Monello</option>
-                        <option value="sapiente">Sapiente</option>
-                        <option value="soldato">Soldato</option>
-                    </select>
-                </p>
-            </form>
-        </div>
-
-        <div class="corpo">
-            <form id="flex">
-                <p>
-                    <label for="velocita">Velocità:</label>
-                    <input type="number" id="velocita" name="velocita" min="1" max="100" required >m
-                </p>
-
-                <p>
-                    <label for="ca">Classe Armatura:</label>
-                    <input type="number" id="ca" name="ca" min="1" max="100" required>
-                </p>
-
-                <p>
-                    <label for="iniziativa">Iniziativa:</label>
-                    <input type="number" id="iniziativa" name="iniziativa" min="1" max="100" required>
-                </p>
-
-                <p>
-                    <label for="dadiVita">Dadi Vita:</label>
-                    <input type="number" id="dadiVita" name="dadiVita" min="1" max="100" required>
-                </p>
-
-                <p>
-                    <label for="bonusCompetenza">Bonus competenza:</label>
-                    <input type="number" id="bonusCompetenza" name="bonusCompetenza" min="1" max="100" required>  
-                </p>
-
-                <p>
-                    <label for="puntiVita">Punti Vita iniziali:</label>
-                    <input type="number" id="puntiVita" name="puntiVita" min="1" max="100" required>
-                </p>
-            </form>
-        </div>
 
         <div class="corpo">
             <form id="prova">
@@ -391,18 +313,17 @@
             </div>
         </div>
 
-        <div class="corpo">
-            <div id="flex">
-                <form>
-                    <input type="submit" value="Salva personaggio">
-                    <input type="submit" value="Stampa personaggio">
-                    <input type="submit" value="Carica personaggio">
-                    <input type="reset" value="Reset">
-                </form>
-            </div>
+        <div id="div-esterno">
+            <table id="table1">
+                <input type="submit" value="Salva personaggio">
+                <input type="submit" value="Stampa personaggio">
+                <input type="submit" value="Carica personaggio">
+                <input type="reset" value="Reset">
+            </table>
         </div>
+
         <div id="footer">
-            <p>Questo sito è stato creato da &copy; dopulus</p>
+            <p>Questo sito è stato creato da &copy;dopulus</p>
         </div>
     </body>
 </html>

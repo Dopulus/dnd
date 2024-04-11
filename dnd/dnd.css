@@ -1,18 +1,10 @@
 h1 {
     font-size: 50px;
-    margin: 0px;
-    margin-left: 20px;
-    margin-right: 20px;
-    padding-left: 20px;
-    padding-right: 20px;
-    margin-top: 20px;
-    margin-bottom: 20px;
+    margin: 20px;
+    padding: 20px;
 }
 
 .corpo h1 {
-    font-size: 90px;
-    margin: 0px 20px;
-    padding: 0px 20px;
     text-align: center;
 }
 
@@ -22,19 +14,26 @@ h1 {
     text-transform: uppercase;
 }
 
-#logo {
+#logo, #logo1 {
     width: 150px;
     height: 100px;
-    float: left;
     text-align: center;
+}
+
+#div-esterno {
+    gap: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+#logo {
+    float: left;
     margin-left: 10px;
 }
 
 #logo1 {
-    width: 150px;
-    height: 100px;
     float: right;
-    text-align: center;
     margin-right: 10px;
 }
 
@@ -50,12 +49,11 @@ h1 {
     justify-content: space-between;
     align-items: center;
     background-color: rgba(0, 0, 0, 0.78);
+    overflow-x: hidden;
 }
 
-input {
-    width: auto;
-    margin: 0px 0px 0px 10px;
-    padding: 0px;
+#width {
+    width: 100%;
 }
 
 body {
@@ -69,18 +67,9 @@ body {
     overflow-x: hidden;
 }
 
-p {
+p, label {
     font-size: 20px;
-    margin: 0px;
-    padding: 0px;
-    margin-left: 10px;
-    margin-top: 10px;
-    margin-right: 10px;
-    margin-bottom: 10px;
-}
-
-#int{
-    font-size: 30px;
+    margin: 10px;
 }
 
 #flex {
@@ -99,31 +88,7 @@ p {
 
 #flex form input[type="submit"], #flex form input[type="reset"] {
     flex-grow: 1;
-    margin: 0 5px; /* Aggiunge un po' di spazio tra i pulsanti */
-}
-
-#prova p {
-    width: 50%;
-}
-
-#prova [type="number"] {
-    width: 30%;
-}
-
-label {
-    font-size: 20px;
-    margin: 0px;
-    padding: 0px;
-    margin-left: 10px;
-    margin-top: 10px;
-    margin-right: 10px;
-    margin-bottom: 10px;
-}
-
-#colonna{
-    width: 50%;
-    height: 100%;
-    float: left;
+    margin: 0 5px;
 }
 
 .contorno {
@@ -141,7 +106,6 @@ label {
 #footer {
     color: white;
     width: 100%;
-    margin-top: 10px;
     margin-top: 10px;
     padding: 10px;
     text-align: center;
@@ -162,12 +126,6 @@ input[type="submit"], input[type="reset"] {
     background-color: rgba(0, 0, 0, 0.78);
 }
 
-#inputId {
-    width: 100%;
-    margin: 0px 0px 0px 10px;
-    padding: 0px;
-}
-
 table {
     width: 100%;
     border-collapse: collapse;
@@ -179,11 +137,4 @@ table td, table th {
     padding: 10px;
     text-align: center;
     align-items: center;
-}
-
-#table1 {
-    width: 100%;
-    border-collapse: collapse;
-    margin: 10px;
-    padding: 10px;
 }
